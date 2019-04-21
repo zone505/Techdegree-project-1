@@ -60,7 +60,7 @@ let quotes = [
 ];
 
 
-// This generators a random quote
+// This generates a random quote
 
 function getRandomQuote(array) {
   let getNumber =  Math.floor(Math.random()* quotes.length);
@@ -93,7 +93,7 @@ function printQuote() {
 "</p>"
  chback();
 };
-// This changes the quote and background color after 10 seconds
+// This changes the quote after 10 seconds
  let x = 0;
  let autoRefresh = window.setInterval(function(){
    printQuote();
