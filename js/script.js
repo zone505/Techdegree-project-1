@@ -84,23 +84,16 @@ function chback (){
 
 // This prints the quote and it's object values
 function printQuote() {
-  let randomquote = getRandomQuote(quotes);
-  let htmlstr = "";
-    htmlstr +='<p class="quote">' + randomquote.quote + "</p>";
-    htmlstr += '<p class="source">' + randomquote.source;
-  // prints citation if it's in the object selected
-  if (randomquote.citation) {
-    htmlstr += '<span class="citation">' + randomquote.citation + '</span>';
-  }
-  // prints year if it's in the object selected
-  if (randomquote.year) {
-    htmlstr += '<span class="year">' + randomquote.year + '</span>';
-  }
-    htmlstr += '</p>'
+  let randomQuote = getRandomQuote(quotes);
+  let quoteInitiation = document.getElementById('quote-box').innerHTML =
+"<p class='quote'>" + randomQuote.quote +"</p>"+
+"<p class='source'>" +  randomQuote.source  +
+  "<span class='citation'>" + randomQuote.citation  +" </span>" +
+  "<span class='year'>" +  randomQuote.year  + "</span>"+
+"</p>"
  chback();
 };
-
-// This changes the quote after 5 seconds
+// This changes the quote and background color after 10 seconds
  let x = 0;
  let autoRefresh = window.setInterval(function(){
    printQuote();
