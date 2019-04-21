@@ -105,7 +105,4 @@ function printQuote() {
 
 
 
-
-// This event listener will respond to "Show another quote" button clicks
-// when user clicks anywhere on the button, the "printQuote" function is calleddocument.getElementById('loadQuote').addEventListener("click", printQuote, false);
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
